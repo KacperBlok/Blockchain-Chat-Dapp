@@ -12,7 +12,7 @@ const NavBar = () => {
       {
         menu: "All Users",
         link: "alluser",
-      }
+      },
     ]
   return (
     <div className={Style.Navbar}>
