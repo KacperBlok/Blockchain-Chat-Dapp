@@ -43,7 +43,7 @@ const NavBar = () => {
     <div className={Style.Navbar}>
       <div className={Style.NavBar_box}></div>
       <div className={Style.Navbar_box_left}>
-        <Image src={images.logo} alt="logo" width={50} height={50} />
+        <Image src={images.logo} alt="logo" width={300} height={75} />
       </div>
       <div className={Style.Navbar_box_right}>
         <div className={Style.Navbar_box_right_menu}>
@@ -51,7 +51,14 @@ const NavBar = () => {
             <div onClick={()=> setActive(i + 1)} key= {1 + 1} className={`$
               {Style.Navbar_box_right_menu_items} ${active == i + 1 ? Style.active_btn : ""
               }}`}
-            ></div>
+            >
+              <Link 
+                className={Style.Navbar_box_right_menu_items_link}
+                href={el.link}
+              >
+                {el.menu}
+              </Link>
+            </div>
           ))}
         </div>
       </div>
