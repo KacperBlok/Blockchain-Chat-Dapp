@@ -25,7 +25,7 @@ const NavBar = () => {
 
     return (
         <div className={Style.Navbar}>
-            <div className={Style.NavBar_box}></div>
+            <div className={Style.NavBar_box}>
             <div className={Style.Navbar_box_left}>
                 <Image src={images.logo} alt="logo" width={300} height={75} />
             </div>
@@ -77,8 +77,34 @@ const NavBar = () => {
                 )}
 
                 {/* Connect Wallet */}
+                <div className={Style.Navbar_box_right_connect}>
+                  {account == "" ? (
+                    <button onClick={()=> connectWallet()}>
+                      {""}
+                      <span>Connect Wallet</span>
+                    </button>
+                  ) : (
+                    <button onClick={() => setOpenModel(true)}>
+                      {" "}
+                      <Image src={UserName ? images.accountName : images.create2}
+                        alt="account image"
+                        width={20}
+                        height={20}
+                      />
+                      {''}
+                      <small>{userName || "Create Account"}</small>
+
+                    </button>
+                  )}
+                  </div>
+                  <div className={Style.Navbar_box_right_open}
+                  onClick={() => setOpen(true)}
+                  >
+                    <Image src={images.open} alt="open" width={30} height={30} />
+                    </div>
             </div>
         </div>
+    </div>  
     );
 };
 
