@@ -26,10 +26,10 @@ const NavBar = () => {
     return (
         <div className={Style.Navbar}>
             <div className={Style.NavBar_box}>
-            <div className={Style.Navbar_box_left}>
+              <div className={Style.Navbar_box_left}>
                 <Image src={images.logo} alt="logo" width={300} height={75} />
-            </div>
-            <div className={Style.Navbar_box_right}>
+              </div>
+              <div className={Style.Navbar_box_right}>
                 {/* Desktop */}
                 <div className={Style.Navbar_box_right_menu}>
                     {menuItems.map((el, i) => (
@@ -58,7 +58,7 @@ const NavBar = () => {
                                 key={1+ 1}
                                 className={`${Style.mobile_menu_items} ${
                                     active === i + 1 ? Style.active_btn : ""
-                                }`}
+                                }}`}
                             >
                                 <Link
                                     className={Style.mobile_menu_items_link}

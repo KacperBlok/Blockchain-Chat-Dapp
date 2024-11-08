@@ -3,3 +3,53 @@
     border-radius: 8px; 
   }
 
+  .Navbar{
+    width: 80%;
+    margin: 3rem auto;
+    position: relative;
+  }
+  
+  .NavBar_box{
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .Navbar_box_left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .NavBar_box_right_menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  .active_btn{
+    color: burlywood;
+    border-bottom: 2px solid burlywood;
+    padding-bottom: .4rem;
+  }
+  .NavBar_box_right_connect{
+    display: flex;
+    justify-self: flex-end;
+  }
+
+  .NavBar_box_right_connect button{
+    background-color: brown;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    color: #f18303;
+    font-weight: 700;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
